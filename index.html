@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOLVIBE™ - Revolutionary Topical Anesthetic Inducer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-snowflake"></i>
+                <span>COOLVIBE™</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <!-- Theme toggle button in navbar -->
+                <button class="theme-toggle-nav" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    Revolutionary MedTech Solution
+                </div>
+                <h1 class="hero-title">
+                    Meet <span class="brand-name">COOLVIBE™</span><br>
+                    The Future of <span class="highlight">Pain-Free</span> Medical Procedures
+                </h1>
+                <p class="hero-description">
+                    Our groundbreaking Topical Anesthetic Inducer eliminates needle phobia and transforms the medical experience for 16% of adults who avoid vaccination due to fear.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">16%</span>
+                        <span class="stat-label">Adults avoid vaccination</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Needle-free experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Pain & anxiety</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <button class="cta-primary" id="notifyBtn">
+                        <i class="fas fa-bell"></i>
+                        Get Early Access
+                    </button>
+                    <button class="cta-secondary">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="device-mockup">
+                    <div class="device-screen">
+                        <div class="pulse-animation"></div>
+                        <i class="fas fa-snowflake device-icon"></i>
+                    </div>
+                </div>
+                
+                <!-- Coming Soon Badge moved here -->
+                <div class="coming-soon-badge">
+                    <span>
+                        <i class="fas fa-clock"></i>
+                        Coming Soon
+                    </span>
+                    <div class="countdown" id="countdown">
+                        <div class="time-unit">
+                            <span id="days">00</span>
+                            <label>Days</label>
+                        </div>
+                        <div class="time-unit">
+                            <span id="hours">23</span>
+                            <label>Hours</label>
+                        </div>
+                        <div class="time-unit">
+                            <span id="minutes">59</span>
+                            <label>Minutes</label>
+                        </div>
+                        <div class="time-unit">
+                            <span id="seconds">52</span>
+                            <label>Seconds</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="floating-elements">
+                    <div class="float-element element-1"></div>
+                    <div class="float-element element-2"></div>
+                    <div class="float-element element-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why COOLVIBE™ Changes Everything</h2>
+                <p>Addressing the critical healthcare challenge of needle phobia with cutting-edge technology</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Eliminates Needle Fear</h3>
+                    <p>Completely removes the need for traditional needle-based procedures, addressing trypanophobia at its core.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Advanced Electronics</h3>
+                    <p>State-of-the-art electronic systems ensure precision, reliability, and consistent performance in medical settings.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Patient-Centered Design</h3>
+                    <p>Designed with patient experience in mind, reducing anxiety and improving overall healthcare accessibility.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Medical Grade Safety</h3>
+                    <p>Meets the highest medical standards for safety, efficacy, and regulatory compliance in healthcare environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Transforming Healthcare Through Innovation</h2>
+                    <p>COOLVIBE™ represents a paradigm shift in medical technology. By combining cutting-edge electronic engineering with deep understanding of patient psychology, we create solutions that transform the medical experience.</p>
+                    <p>We believe that fear should never be a barrier to healthcare. Our Topical Anesthetic Inducer ensures that more people can access essential medical procedures without anxiety.</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <h3>Medical Innovation</h3>
+                            <p>Breakthrough technology in topical anesthesia</p>
+                        </div>
+                        <div class="about-stat">
+                            <h3>Patient First</h3>
+                            <p>Designed to eliminate medical procedure anxiety</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="tech-illustration">
+                        <div class="tech-circle"></div>
+                        <div class="tech-waves"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Ready to learn more about COOLVIBE™? Contact our team for early access and partnership opportunities.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>MedTech Innovation Hub<br>Healthcare District, Tech City</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-COOL</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@thecoolvibe.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="notifyForm">
+                        <h3>Get Early Access</h3>
+                        <div class="form-group">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">I'm interested as a...</option>
+                                <option value="healthcare-provider">Healthcare Provider</option>
+                                <option value="medical-facility">Medical Facility</option>
+                                <option value="investor">Investor</option>
+                                <option value="patient">Patient</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell us about your interest in COOLVIBE™"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Join the Revolution
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-snowflake"></i>
+                        <span>COOLVIBE™</span>
+                    </div>
+                    <p>Revolutionizing healthcare through innovative medical technology.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#about">Technology</a>
+                        <a href="#">Safety</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <a href="#about">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <a href="#contact">Contact</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 COOLVIBE™. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Modal -->
+    <div id="notificationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You!</h3>
+            </div>
+            <p>You've been added to our early access list. We'll notify you as soon as COOLVIBE™ is available.</p>
+            <button class="modal-btn">Got it!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
