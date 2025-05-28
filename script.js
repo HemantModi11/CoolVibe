@@ -93,6 +93,12 @@ class ThemeManager {
 // Initialize theme manager when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     const themeManager = new ThemeManager();
+    const waitlistModal = document.getElementById('waitlistModal');
+    const notificationModal = document.getElementById('notificationModal');
+    const waitlistForm = document.getElementById('waitlistForm');
+    const notifyBtn = document.getElementById('notifyBtn');
+    const closeButtons = document.querySelectorAll('.close');
+    const modalBtns = document.querySelectorAll('.modal-btn');
     
     // Make theme manager globally accessible
     window.themeManager = themeManager;
@@ -102,6 +108,69 @@ document.addEventListener('DOMContentLoaded', function() {
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         themeManager.setTheme(prefersDark ? 'dark' : 'light');
     }
+
+    // Open waitlist modal when "Join Waitlist" button is clicked
+    notifyBtn.addEventListener('click', function() {
+        waitlistModal.style.display = 'block';
+    });
+    
+    // Close modals when X is clicked
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            waitlistModal.style.display = 'none';
+            notificationModal.style.display = 'none';
+        });
+    });
+    
+    // Close modals when "Got it" button is clicked
+    modalBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            notificationModal.style.display = 'none';
+        });
+    });
+    
+    // Close modals when clicking outside
+    window.addEventListener('click', function(event) {
+        if (event.target === waitlistModal) {
+            waitlistModal.style.display = 'none';
+        }
+        if (event.target === notificationModal) {
+            notificationModal.style.display = 'none';
+        }
+    });
+    
+    // Handle waitlist form submission
+    waitlistForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('waitlistName').value;
+        const email = document.getElementById('waitlistEmail').value;
+        
+        // Dummy API call (replace with real API later)
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: name,
+                email: email
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            // Close waitlist modal and show notification
+            waitlistModal.style.display = 'none';
+            notificationModal.style.display = 'block';
+            
+            // Reset form
+            waitlistForm.reset();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
 });
 
 // Countdown Timer
@@ -153,16 +222,8 @@ window.addEventListener('scroll', function() {
 
 // Modal functionality
 const modal = document.getElementById('notificationModal');
-const notifyBtns = document.querySelectorAll('#notifyBtn');
 const closeBtn = document.querySelector('.close');
 const modalBtn = document.querySelector('.modal-btn');
-
-notifyBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    });
-});
 
 closeBtn.addEventListener('click', function() {
     modal.style.display = 'none';
